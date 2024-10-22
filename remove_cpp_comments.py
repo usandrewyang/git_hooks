@@ -2,7 +2,7 @@
 import re
 import sys
 
-def remove_cpp_comments(file_path):
+def main(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
@@ -15,5 +15,5 @@ def remove_cpp_comments(file_path):
 
 if __name__ == "__main__":
     for file_path in sys.argv[1:]:
-        remove_cpp_comments(file_path)
+        main(file_path)
 
