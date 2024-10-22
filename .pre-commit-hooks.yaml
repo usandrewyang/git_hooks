@@ -1,0 +1,7 @@
+-   id: remove-cpp-comments
+    name: Remove C++ Style Comments
+    description: This hook removes C++ style comments.
+    entry: remove_cpp_comments
+    language: python
+    files: \.c$
+    types: [text]
