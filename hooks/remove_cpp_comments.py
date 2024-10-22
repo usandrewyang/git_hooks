@@ -1,8 +1,9 @@
 #!/tools/bin/python
 import re
 import sys
+# import argparse
 
-def main(file_path):
+def fix_file(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
@@ -13,7 +14,10 @@ def main(file_path):
     with open(file_path, 'w') as file:
         file.write(content)
 
-if __name__ == "__main__":
+def main(argv):
     for file_path in sys.argv[1:]:
-        main(file_path)
+        print(f'Fixing {file_path}')
+        fix_file(file_path)
 
+if __name__ == "__main__":
+   raise SystemExit(main())
