@@ -16,6 +16,10 @@ def remove_cpp_comments(file_path):
     with open(file_path, 'w') as file:
         file.write(content)
 
+def main():
+    for file_path in sys.argv[1:]:
+        remove_cpp_comments(file_path)
+
 if __name__ == "__main__":
     for file_path in sys.argv[1:]:
         remove_cpp_comments(file_path)
