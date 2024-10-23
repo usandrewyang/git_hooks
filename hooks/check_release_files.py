@@ -1,4 +1,6 @@
 #!/tools/bin/python
+import sys
+
 def check_file_exist(file_path):
     print(f'{file_path}')
     return retval
