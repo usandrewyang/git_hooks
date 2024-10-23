@@ -5,3 +5,10 @@
     language: python
     files: \.c$
     types: [text]
+-   id: check-release-files
+    name: Check if the updated file exists in FILES.esw or FILES.ltsw
+    description: This hook removes C++ style comments.
+    entry: check_release_files 
+    language: python
+    files: \.(c|h|txt)$
+    types: [text]
