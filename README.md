@@ -9,8 +9,8 @@ repos:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/usandrewyang/git_hooks
-    rev: v1.0.8
+    rev: v1.0.12
     hooks:
     -   id: remove-cpp-comments
-
+    -   id: check-release-files
 ```
