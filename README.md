@@ -32,6 +32,7 @@ pre-commit install
 ```
 ## Hooks
 id: remove-cpp-comments Remove c++ style (//) single line comments
+
 id: check-release-files Check the update files exist in FILES.esw or FILES.ltsw
 
 
