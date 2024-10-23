@@ -1,23 +1,21 @@
 #!/tools/bin/python
 import re
 import sys
-# import argparse
 
-def fix_file(file_path):
+def remove_cpp_comments(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
 
-    # Regex for removing C++ style comments
-    content = re.sub(r'//.*?$', '', content, flags=re.MULTILINE)  # Single-line comments
-    # content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)  # Multi-line comments
+    # Regex for removing C++ style single-line comments
+    content = re.sub(r'//.*?$', '', content, flags=re.MULTILINE)
 
+    # Regex for removing C++ style multi-line comments
+    # content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
+
+    # Write the cleaned content back to the file
     with open(file_path, 'w') as file:
         file.write(content)
 
-def main(argv):
-    for file_path in sys.argv[1:]:
-        print(f'Fixing {file_path}')
-        fix_file(file_path)
-
 if __name__ == "__main__":
-   raise SystemExit(main())
+    for file_path in sys.argv[1:]:
+        remove_cpp_comments(file_path)
